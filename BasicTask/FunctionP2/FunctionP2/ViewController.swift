@@ -65,6 +65,36 @@ class ViewController: UIViewController {
                 print(someName)
             }
         }
+        
+        //Factorial
+        
+        func factorial(num: Int) -> Int {
+//            if num == 1 {
+//                return 1
+//            } else {
+//                let result = num * factorial(num: num - 1)
+//                return result
+//            }
+            
+            (num == 0 || num == 1) ? 1 : num * factorial(num: num - 1)
+        }
+        
+        let fact = factorial(num: 5)
+        print(fact)
+        
+        let fact1 = factorial(num: 10)
+        print(fact1)
+        
+        func clouserTest1(a: Int, b: Int, clouser: (Int, Int) -> Int) -> Int {
+            
+            return clouser(a, b)
+        }
+        
+        let mult = clouserTest1(a: 10, b: 10) { num1, num2 in
+            num1 * num2
+        }
+        
+        print(mult)
     }
 
 
