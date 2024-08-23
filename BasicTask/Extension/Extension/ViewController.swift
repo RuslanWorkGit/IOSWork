@@ -61,6 +61,82 @@ extension String {
     }
 }
 
+protocol Runable {
+    func run()
+}
+
+protocol Flyable {
+    func fly()
+}
+
+protocol Alive {
+    func breath()
+    func eat()
+    func grow()
+}
+
+extension Alive {
+    func breath() {
+        print("breath")
+    }
+    
+    func eat() {
+        print("eat")
+    }
+}
+
+struct Ruslan: Alive, Runable {
+    func grow() {
+        print("grow")
+    }
+    
+    func run() {
+        print("run")
+    }
+}
+
+struct SpiderMan: Alive {
+    func grow() {
+        print("grow")
+    }
+}
+
+struct Yana: Alive {
+    func grow() {
+        print("grow")
+    }
+}
+
+struct BirdMan: Alive, Flyable {
+    func grow() {
+        print("grow")
+    }
+    
+    func fly() {
+        print("fly")
+    }
+}
+
+struct Bird: Flyable {
+    func fly() {
+        print("fly")
+    }
+}
+
+struct Arsen: Alive, Runable, Flyable {
+    func grow() {
+        print("grow")
+    }
+    
+    func run() {
+        rint("run")
+    }
+    
+    func fly() {
+        print("fly")
+    }
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -73,6 +149,13 @@ class ViewController: UIViewController {
         myText.getFirstSentences()
         myText.getFirstBeforeKoma()
         print(myText.getExclamationMartSentences())
+        
+        let me = Ruslan()
+        let yana = Yana()
+        let spiderMan = SpiderMan()
+        let birdMan = BirdMan()
+        let bird = Bird()
+        let arsen = Arsen()
             
     }
 
