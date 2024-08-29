@@ -129,7 +129,7 @@ struct Arsen: Alive, Runable, Flyable {
     }
     
     func run() {
-        rint("run")
+        print("run")
     }
     
     func fly() {
@@ -158,7 +158,5 @@ class ViewController: UIViewController {
         let arsen = Arsen()
             
     }
-
-
 }
 
