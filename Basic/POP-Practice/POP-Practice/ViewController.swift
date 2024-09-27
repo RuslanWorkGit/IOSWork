@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  POP-Practice
-//
-//  Created by Ruslan Liulka on 20.09.2024.
-//
+
 
 import UIKit
 //Class
